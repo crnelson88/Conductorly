@@ -23,7 +23,7 @@ public class MyQuery : IQuery<string>
 // Conductorly.Abstractions.IQueryHandler
 public class MyQueryHandler : IQueryHandler<MyQuery, string>
 {
-    public Task<string> Handle(MyQuery query)
+    public async Task<string> Handle(MyQuery query)
     {
         ...
     }
@@ -40,7 +40,7 @@ public class MyCommand : ICommand
 // Conductorly.Abstractions.ICommandHandler
 public class MyCommandHandler : ICommandHandler<MyCommand>
 {
-    public Task Handle(MyCommand request)
+    public async Task Handle(MyCommand request)
     {
         ...
     }
